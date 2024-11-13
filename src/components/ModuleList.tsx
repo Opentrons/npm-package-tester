@@ -22,13 +22,19 @@ export function getModuleImage(model: ModuleModel): string {
 // Component to render a list of module types with their images
 export default function ModuleTypeList() {
     return (
-        <div style={{ padding: '20px', textAlign: 'center' }}>
-            <h2>Available Module Types</h2>
-            <ul style={{ listStyleType: 'none', padding: 0 }}>
+        <div style={{ textAlign: 'center', marginTop: '5px' }}>
+            <h2 style={{ marginBottom: '10px' }}>Available Module Types</h2>
+            <div style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(2, 1fr)',
+                gap: '10px', // Adjust gap for closer spacing
+                justifyItems: 'center',
+                alignItems: 'center'
+            }}>
                 {Object.keys(MODULE_IMAGES).map((moduleType) => (
-                    <li key={moduleType} style={{ margin: '20px 0', textAlign: 'center' }}>
+                    <div key={moduleType} style={{ textAlign: 'center' }}>
                         {/* Display the module name */}
-                        <p style={{ fontWeight: 'bold', marginBottom: '10px' }}>{moduleType}</p>
+                        <p style={{ fontWeight: 'bold', marginBottom: '5px' }}>{moduleType}</p>
                         {/* Display the image if the path is valid */}
                         {getModuleImage(moduleType as ModuleModel) ? (
                             <Image
@@ -41,9 +47,9 @@ export default function ModuleTypeList() {
                         ) : (
                             <p>Image not available</p>
                         )}
-                    </li>
+                    </div>
                 ))}
-            </ul>
+            </div>
         </div>
     )
 }
