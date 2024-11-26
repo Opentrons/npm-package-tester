@@ -16,5 +16,7 @@ npm install @opentrons/shared-data@0.1.6-alpha.9
 ## How to run this project
 
 ```shell
-npm run dev
+pnpm run dev
 ```
+<http://localhost:3000>
+<http://localhost:3000/a>

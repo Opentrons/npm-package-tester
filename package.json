@@ -13,7 +13,8 @@
     "@opentrons/shared-data": "^0.1.6-alpha.9",
     "next": "14.2.18",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "styled-components": "5.3.11"
   },
   "devDependencies": {
     "@types/node": "^20",
